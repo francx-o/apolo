@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Articles | Read
+        </title>
+        <link rel="stylesheet" href="Styles.CSS">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()>
+                        <a href="Categories.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="26" height="26"><path d="M14.121,12,18,8.117A1.5,1.5,0,0,0,15.883,6L12,9.879,8.11,5.988A1.5,1.5,0,1,0,5.988,8.11L9.879,12,6,15.882A1.5,1.5,0,1,0,8.118,18L12,14.121,15.878,18A1.5,1.5,0,0,0,18,15.878Z"/></svg>
+                        </a>
+                    </li>
+                    <li><a class="link" href="index.html">About Us</a></li>
+                    <li><a class="link" href="Articles.html">Articles</a></li>
+                    <li><a class="link" href="login.html">Join Us</a></li>
+                </ul>
+                <ul class="navmain">
+                    <li><a class="logo" href="index.html"><b>Apollogetics</b></a></li>
+                    <li class="search">
+                        <!--searchbar-->
+                        <div class="searchbar">
+                            <input type="text" class="searchinput" placeholder="Search ">
+                            <button onclick="alert('This is a search bar')" class="searchsubmit">
+                                <img class="searchbutton" src="search.png">
+                            </button>
+                        </div>
+                    </li>
+                    <li class="hideOnMobile"><a class="link" href="index.html">About Us</a></li>
+                    <li class="hideOnMobile"><a class="link" href="Articles.html">Articles</a></li>
+                    <li class="hideOnMobile"><a class="link" href="login.html">Join Us</a></li>
+                    <li onclick=showSidebar() class="menubutton"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="26" height="26"><rect y="11" width="24" height="2" rx="1"/><rect y="4" width="24" height="2" rx="1"/><rect y="18" width="24" height="2" rx="1"/></svg></a></li> 
+                </ul>
+            </nav>
+            <script>
+                function showSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display ='flex'
+                }
+                function hideSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display ='none'
+                }
+            </script>
+        </header>
+        <main>
+            <div class="categoriescontainer">
+                <div class="categorieslist">
+                    <h1 class="heading">Reads</h1>
+                </div>
+                <div class="shelf">
+                    <div class="books">
+                        <div class="booklabels">
+                            <h2 id="title">Biblical Exegesis on the creation of light</h2>
+                            <br>
+                            <div class="dwn">
+                            <a id="chat" href="#">Chat</a>
+                            <a id="downloaddocument" href="#">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footercontainer">
+                <div class="social">
+                  <ul>
+                    <li><a href="#"><img src="instagram.png" alt="Insta" class="icon"></a></li>
+                    <li><a href="#"><img src="whatsapp.png" alt="whatsApp" class="icon"></a></li>
+                  </ul>
+                </div>
+                <div class="copyright">
+                  <p class="footers">&copy; 2025</p>
+                </div>
+            </div>
+    </footer>
+    </body>
+    
+</html>
