@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 1px 1px 2px black;
+}
+
+nav .navmain {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav .logo {
+    flex: 0 0 auto;
+    min-width: 30px;
+    text-align: left;
+}
+
+nav .search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav .link:hover{
+    background-color: rgb(198, 198, 198);
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px); /* we want to create a glass effect */
+    background-color: rgba(255, 255, 255, 0.134);
+    box-shadow: -1px 0 1px black;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menubutton {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menubutton{
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar{
+        width: 100%;
+    }
+}
+
+footer {
+  background-color: rgb(198, 198, 198);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  flex-shrink: 0;
+  padding: 0rem;
+}
+
+main {
+    flex: 10 auto;
+}
+
+.footercontainer {
+    width: 100%;
+    padding: 70px 0px 20px;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 30px;
+}
+
+.aboutcontent {
+    text-align: justify;
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.loginbox {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.271);
+}
+
+.loginheader {
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.loginheader header {
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.inputbox .inputfield {
+    width: 80%;
+    height: 50px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border-color: black;
+    align-content: center;
+}
+::placeholder {
+    font-weight: 500;
+    color: rgb(107, 107, 107);
+}
+
+.forgot {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    width: 257px;
+    margin-top: -3px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: rgb(84, 83, 83);
+}
+
+#check {
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+section a {
+    color: brown;
+}
+
+.inputsubmit {
+    display: block;
+    position: relative;
+    width: 270px;
+}
+
+.submitbtn {
+    width: 100%;
+    height: 50px;
+    background: rgb(0, 0, 0);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.inputsubmit label {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+
+.submitbtn:hover {
+    background: black;
+    transform: scale(1.05, 1);
+}
+
+.signuplink {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 60px;
+}
+
+.signuplink a {
+    color: black;
+    font-weight: 600;
+}
+
+/*searchbar*/
+.searchbutton {
+    height: 12.6px;
+    width: 12.6px;
+}
+
+.searchbar {
+    --size: 70px;
+    --padding: 2px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    background-color: white;
+    border-radius: 100px;
+    overflow: hidden;
+
+    border: 1.5px solid black;
+
+    padding: var(--padding);
+    margin-left: auto;
+    margin-top: 6px;
+    margin-right: 5px;
+    height: 32px;
+    max-width: 90%;
+    min-width: 40%
+}
+
+.searchinput {
+    margin-inline: 1rem;
+    font-size: 18px;
+    color: black;
+    background-color: transparent;
+    flex: auto;
+    border: none;
+    outline: none;
+    width: 50px;
+}
+
+.searchsubmit {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    height: 32px;
+    cursor: pointer;
+    border: none;
+    width: 32px;
+}
+
+@media (max-width: 100px) {
+    .searchbar {
+        position: absolute;
+    }
+}
+
+.categorieslist {
+    margin-top: -3px;
+    text-align: center;
+    border: 1.5px solid rgb(202, 201, 201);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-left: 4%;
+}
+
+.categoriescontainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.categoriesindiv {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px;
+    color: black;
+}
+
+.uploaddocument {
+    min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.uploaddoc {
+    color: rgb(0, 0, 0);
+}
+
+.uploaddoc, .categoriesindiv:hover {
+    color: rgb(74, 74, 74);
+}
+
+.heading {
+    text-align: left;
+    margin-left: 5%;
+    color: rgb(83, 82, 82);
+    box-shadow: 3px;
+}
+
+.shelf {
+    display: flex;
+    border: none;
+    min-height: 383.5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.books {
+    background-color: rgb(118, 123, 123);
+    color: rgb(0, 0, 0);
+    border: none;
+    height: 200px;
+    width: 190px;
+    border-radius: 7px;
+}
+
+.booklabels {
+    border: none;
+    height: 170px;
+    width: 160px;
+    padding: 4px;
+    margin: 10px;
+}
+
+#chat, #downloaddocument {
+    color: black;
+}
+
+#chat:hover, #downloaddocument:hover {
+    color: rgb(255, 255, 255);
+}
+
+.dwn {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
